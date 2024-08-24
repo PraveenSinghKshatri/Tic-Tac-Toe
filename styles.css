@@ -1,0 +1,154 @@
+
+/* General reset and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fafafa;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    margin-top: 15px;
+}
+
+/* Grid styling */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    border: 5px solid #777;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    aspect-ratio: 1 / 1; /* Aspect ratio */
+}
+
+/* Hover and active states */
+.cell:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    transform: scale(0.98);
+    transition: 0.2s;
+}
+
+.cell:active {
+    transform: scale(0.95);
+    border: #007bff 2px double;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: #fafafa;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px auto;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Input styling */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px auto;
+    width: calc(50% - 22px);
+    box-sizing: border-box;
+}
+
+/* Message styling */
+.message {
+    font-size: 1.2rem;
+    color: #fafafa;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #262626;
+    font-weight: 300;
+    color: #fff;
+
+}
+
+.copyright i{
+    color: #ff004f;
+}
+
+.copyright i:hover{
+    color: #ff004f;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 20%;
+
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2px;
+    }
+
+    .cell {
+        font-size: 2rem;
+    }
+
+    button, input[type="text"] {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+}
